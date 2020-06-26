@@ -1,0 +1,28 @@
+﻿@model MJG.Models.Entity.tblHakkimda
+@{
+    ViewBag.Title = "VeriGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Veriler</h2>
+
+@using (Html.BeginForm("Guncelle", "Hakkimda", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.ID)
+        @Html.TextBoxFor(m => m.ID, new { @class = "form-control" })<br />
+        @Html.LabelFor(m => m.aciklama)
+        @Html.TextBoxFor(m => m.aciklama, new { @class = "form-control" })<br />
+        @Html.LabelFor(m => m.bölge)
+        @Html.TextBoxFor(m => m.bölge, new { @class = "form-control" })<br />
+        @Html.LabelFor(m => m.egitim)
+        @Html.TextBoxFor(m => m.egitim, new { @class = "form-control" })<br />
+        @Html.LabelFor(m => m.yas)
+        @Html.TextBoxFor(m => m.yas, new { @class = "form-control" })<br />
+        @Html.LabelFor(m => m.mail)
+        @Html.TextAreaFor(m => m.mail, new { @class = "form-control" })<br />
+        @Html.LabelFor(m => m.telefon)
+        @Html.TextAreaFor(m => m.telefon, new { @class = "form-control" })<br />
+        <button class="btn btn-primary">Güncelle</button>
+    </div>
+}

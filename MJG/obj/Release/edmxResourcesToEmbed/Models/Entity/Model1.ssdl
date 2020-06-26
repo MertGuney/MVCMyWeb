@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="mertgune_AdminModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblDeneyim">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="egitimBaslik" Type="varchar" MaxLength="50" />
+    <Property Name="egitimAciklama" Type="varchar" MaxLength="50" />
+    <Property Name="egitimTarih" Type="varchar" MaxLength="50" />
+    <Property Name="hizmetBaslik" Type="varchar" MaxLength="50" />
+    <Property Name="hizmetAciklama" Type="varchar" MaxLength="500" />
+    <Property Name="hizmetTarih" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblHakkimda">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="aciklama" Type="varchar(max)" />
+    <Property Name="yas" Type="varchar" MaxLength="5" />
+    <Property Name="bölge" Type="varchar" MaxLength="50" />
+    <Property Name="egitim" Type="varchar" MaxLength="50" />
+    <Property Name="mail" Type="varchar" MaxLength="50" />
+    <Property Name="telefon" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="tblHizmetler">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="aciklama" Type="varchar" MaxLength="250" />
+    <Property Name="baslik" Type="varchar" MaxLength="50" />
+    <Property Name="ico" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblKullanici">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kullaniciAdi" Type="varchar" MaxLength="50" />
+    <Property Name="sifre" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="mertgune_AdminModelStoreContainer">
+    <EntitySet Name="tblDeneyim" EntityType="Self.tblDeneyim" Schema="mertgune_Admin" store:Type="Tables" />
+    <EntitySet Name="tblHakkimda" EntityType="Self.tblHakkimda" Schema="mertgune_Admin" store:Type="Tables" />
+    <EntitySet Name="tblHizmetler" EntityType="Self.tblHizmetler" Schema="mertgune_Admin" store:Type="Tables" />
+    <EntitySet Name="tblKullanici" EntityType="Self.tblKullanici" Schema="mertgune_Admin" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,28 @@
+﻿@model MJG.Models.Entity.tblDeneyim
+@{
+    ViewBag.Title = "VeriGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Veriler</h2>
+
+@using (Html.BeginForm("Guncelle", "Deneyim", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.ID)
+        @Html.TextBoxFor(m => m.ID, new { @class = "form-control" })<br />
+        @Html.LabelFor(m => m.egitimTarih)
+        @Html.TextBoxFor(m => m.egitimTarih, new { @class = "form-control" })<br />
+        @Html.LabelFor(m => m.egitimBaslik)
+        @Html.TextBoxFor(m => m.egitimBaslik, new { @class = "form-control" })<br />
+        @Html.LabelFor(m => m.egitimAciklama)
+        @Html.TextBoxFor(m => m.egitimAciklama, new { @class = "form-control" })<br />
+        @Html.LabelFor(m => m.hizmetTarih)
+        @Html.TextBoxFor(m => m.hizmetTarih, new { @class = "form-control" })<br />
+        @Html.LabelFor(m => m.hizmetBaslik)
+        @Html.TextAreaFor(m => m.hizmetBaslik, new { @class = "form-control" })<br />
+        @Html.LabelFor(m => m.hizmetAciklama)
+        @Html.TextAreaFor(m => m.hizmetAciklama, new { @class = "form-control" })<br />
+        <button class="btn btn-primary">Güncelle</button>
+    </div>
+}

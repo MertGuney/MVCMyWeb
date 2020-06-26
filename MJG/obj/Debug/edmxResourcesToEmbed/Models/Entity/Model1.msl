@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="mertgune_AdminModelStoreContainer" CdmEntityContainer="mertgune_AdminEntities">
+    <EntitySetMapping Name="tblDeneyim">
+      <EntityTypeMapping TypeName="mertgune_AdminModel.tblDeneyim">
+        <MappingFragment StoreEntitySet="tblDeneyim">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="egitimBaslik" ColumnName="egitimBaslik" />
+          <ScalarProperty Name="egitimAciklama" ColumnName="egitimAciklama" />
+          <ScalarProperty Name="egitimTarih" ColumnName="egitimTarih" />
+          <ScalarProperty Name="hizmetBaslik" ColumnName="hizmetBaslik" />
+          <ScalarProperty Name="hizmetAciklama" ColumnName="hizmetAciklama" />
+          <ScalarProperty Name="hizmetTarih" ColumnName="hizmetTarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblHakkimda">
+      <EntityTypeMapping TypeName="mertgune_AdminModel.tblHakkimda">
+        <MappingFragment StoreEntitySet="tblHakkimda">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+          <ScalarProperty Name="yas" ColumnName="yas" />
+          <ScalarProperty Name="bölge" ColumnName="bölge" />
+          <ScalarProperty Name="egitim" ColumnName="egitim" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="telefon" ColumnName="telefon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblHizmetler">
+      <EntityTypeMapping TypeName="mertgune_AdminModel.tblHizmetler">
+        <MappingFragment StoreEntitySet="tblHizmetler">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="ico" ColumnName="ico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblKullanici">
+      <EntityTypeMapping TypeName="mertgune_AdminModel.tblKullanici">
+        <MappingFragment StoreEntitySet="tblKullanici">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="kullaniciAdi" ColumnName="kullaniciAdi" />
+          <ScalarProperty Name="sifre" ColumnName="sifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

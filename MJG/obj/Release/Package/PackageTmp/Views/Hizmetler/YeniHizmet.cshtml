@@ -1,0 +1,25 @@
+﻿@model MJG.Models.Entity.tblHizmetler
+@{
+    ViewBag.Title = "YeniHizmet";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Yeni Hizmet</h2>
+
+<form class="form-group" method="post">
+    <div>
+        <label>Hizmet Başlık</label>
+        <input type="text" class="form-control" name="baslik" />
+    </div>
+    <br />
+    <div>
+        <label>Hizmet Açıklama</label>
+        <input type="text" class="form-control" name="aciklama" />
+    </div>
+    <div>
+        <label>Hizmet Ico</label>
+        <input type="text" class="form-control" name="ico" />
+    </div>
+    <br />
+    <button class="btn btn-info">Kaydet</button>
+</form>

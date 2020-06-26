@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="mertgune_AdminModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblDeneyim">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="egitimBaslik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="egitimAciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="egitimTarih" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hizmetBaslik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hizmetAciklama" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="hizmetTarih" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblHakkimda">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="yas" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="bölge" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="egitim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblHizmetler">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="aciklama" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ico" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblKullanici">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="mertgune_AdminEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblDeneyim" EntityType="Self.tblDeneyim" />
+    <EntitySet Name="tblHakkimda" EntityType="Self.tblHakkimda" />
+    <EntitySet Name="tblHizmetler" EntityType="Self.tblHizmetler" />
+    <EntitySet Name="tblKullanici" EntityType="Self.tblKullanici" />
+  </EntityContainer>
+</Schema>

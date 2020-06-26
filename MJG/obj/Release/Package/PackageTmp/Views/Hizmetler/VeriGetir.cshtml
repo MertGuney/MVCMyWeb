@@ -1,0 +1,22 @@
+﻿@model MJG.Models.Entity.tblHizmetler
+@{
+    ViewBag.Title = "VeriGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Veriler</h2>
+
+@using (Html.BeginForm("Guncelle", "Deneyim", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.ID)
+        @Html.TextBoxFor(m => m.ID, new { @class = "form-control" })<br />
+        @Html.LabelFor(m => m.baslik)
+        @Html.TextBoxFor(m => m.baslik, new { @class = "form-control" })<br />
+        @Html.LabelFor(m => m.aciklama)
+        @Html.TextBoxFor(m => m.aciklama, new { @class = "form-control" })<br />
+        @Html.LabelFor(m => m.ico)
+        @Html.TextBoxFor(m => m.ico, new { @class = "form-control" })<br />
+        <button class="btn btn-primary">Güncelle</button>
+    </div>
+}

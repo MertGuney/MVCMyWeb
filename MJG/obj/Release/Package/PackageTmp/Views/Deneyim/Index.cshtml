@@ -1,0 +1,36 @@
+﻿@model MJG.Models.IEClass.Class1
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Deneyim</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Eğitim Tarih</th>
+            <th>Eğitim Başlık</th>
+            <th>Eğitim Açıklama</th>
+            <th>Hizmet Tarih</th>
+            <th>Hizmet Başlık</th>
+            <th>Hizmet Açıklama</th>
+            <th>Güncelle</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model.Deger3)
+        {
+            <tr>
+                <td>@x.egitimTarih</td>
+                <td>@x.egitimBaslik</td>
+                <td>@x.egitimAciklama</td>
+                <td>@x.hizmetTarih</td>
+                <td>@x.hizmetBaslik</td>
+                <td>@x.hizmetAciklama</td>
+                <td><a href="/Deneyim/VeriGetir/@x.ID" class="btn btn-warning">Güncelle</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/Deneyim/YeniDeneyim/" class="btn btn-success">Yeni Deneyim Ekle</a>
