@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="mertgune_AdminModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tblDeneyim">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="egitimBaslik" Type="varchar" MaxLength="50" />
+          <Property Name="egitimAciklama" Type="varchar" MaxLength="50" />
+          <Property Name="egitimTarih" Type="varchar" MaxLength="50" />
+          <Property Name="hizmetBaslik" Type="varchar" MaxLength="50" />
+          <Property Name="hizmetAciklama" Type="varchar" MaxLength="500" />
+          <Property Name="hizmetTarih" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblHakkimda">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="aciklama" Type="varchar(max)" />
+          <Property Name="yas" Type="varchar" MaxLength="5" />
+          <Property Name="bölge" Type="varchar" MaxLength="50" />
+          <Property Name="egitim" Type="varchar" MaxLength="50" />
+          <Property Name="mail" Type="varchar" MaxLength="50" />
+          <Property Name="telefon" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="tblHizmetler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="aciklama" Type="varchar" MaxLength="250" />
+          <Property Name="baslik" Type="varchar" MaxLength="50" />
+          <Property Name="ico" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblKullanici">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="kullaniciAdi" Type="varchar" MaxLength="50" />
+          <Property Name="sifre" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="mertgune_AdminModelStoreContainer">
+          <EntitySet Name="tblDeneyim" EntityType="Self.tblDeneyim" Schema="mertgune_Admin" store:Type="Tables" />
+          <EntitySet Name="tblHakkimda" EntityType="Self.tblHakkimda" Schema="mertgune_Admin" store:Type="Tables" />
+          <EntitySet Name="tblHizmetler" EntityType="Self.tblHizmetler" Schema="mertgune_Admin" store:Type="Tables" />
+          <EntitySet Name="tblKullanici" EntityType="Self.tblKullanici" Schema="mertgune_Admin" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="mertgune_AdminModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tblDeneyim">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="egitimBaslik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="egitimAciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="egitimTarih" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="hizmetBaslik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="hizmetAciklama" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="hizmetTarih" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tblHakkimda">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="yas" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="bölge" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="egitim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tblHizmetler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="aciklama" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ico" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tblKullanici">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="mertgune_AdminEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblDeneyim" EntityType="Self.tblDeneyim" />
+          <EntitySet Name="tblHakkimda" EntityType="Self.tblHakkimda" />
+          <EntitySet Name="tblHizmetler" EntityType="Self.tblHizmetler" />
+          <EntitySet Name="tblKullanici" EntityType="Self.tblKullanici" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="mertgune_AdminModelStoreContainer" CdmEntityContainer="mertgune_AdminEntities">
+          <EntitySetMapping Name="tblDeneyim">
+            <EntityTypeMapping TypeName="mertgune_AdminModel.tblDeneyim">
+              <MappingFragment StoreEntitySet="tblDeneyim">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="egitimBaslik" ColumnName="egitimBaslik" />
+                <ScalarProperty Name="egitimAciklama" ColumnName="egitimAciklama" />
+                <ScalarProperty Name="egitimTarih" ColumnName="egitimTarih" />
+                <ScalarProperty Name="hizmetBaslik" ColumnName="hizmetBaslik" />
+                <ScalarProperty Name="hizmetAciklama" ColumnName="hizmetAciklama" />
+                <ScalarProperty Name="hizmetTarih" ColumnName="hizmetTarih" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblHakkimda">
+            <EntityTypeMapping TypeName="mertgune_AdminModel.tblHakkimda">
+              <MappingFragment StoreEntitySet="tblHakkimda">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+                <ScalarProperty Name="yas" ColumnName="yas" />
+                <ScalarProperty Name="bölge" ColumnName="bölge" />
+                <ScalarProperty Name="egitim" ColumnName="egitim" />
+                <ScalarProperty Name="mail" ColumnName="mail" />
+                <ScalarProperty Name="telefon" ColumnName="telefon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblHizmetler">
+            <EntityTypeMapping TypeName="mertgune_AdminModel.tblHizmetler">
+              <MappingFragment StoreEntitySet="tblHizmetler">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+                <ScalarProperty Name="baslik" ColumnName="baslik" />
+                <ScalarProperty Name="ico" ColumnName="ico" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblKullanici">
+            <EntityTypeMapping TypeName="mertgune_AdminModel.tblKullanici">
+              <MappingFragment StoreEntitySet="tblKullanici">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="kullaniciAdi" ColumnName="kullaniciAdi" />
+                <ScalarProperty Name="sifre" ColumnName="sifre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
