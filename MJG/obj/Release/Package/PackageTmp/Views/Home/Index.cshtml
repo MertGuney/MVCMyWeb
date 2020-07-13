@@ -9,10 +9,11 @@
 <head>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-    <meta name="description" content="Name of your web site">
-    <meta name="author" content="Marketify">
-
+    <meta name="google-site-verification" content="X6k4CYxLvJ5EP5sDl6IZiQoxGnc1x_0jOKZ_-q1qytY" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Mert Güney Software Engineer Kişisel Web Sitesi, Yazılım Geliştirme, Web Sitesi Geliştirme, Masaüstü Uygulama Geliştme">
+    <meta name="author" content="Mert Guney">
+    <meta name="keywords" content="Mert,Güney,Mert Güney,Software Engineer,HTML,CSS,JAVA,C#,MVC5,Javascript">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <title>Mert Güney</title>
@@ -24,6 +25,13 @@
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link href="~/mjg/css/plugins.css" rel="stylesheet" />
     <link href="~/mjg/css/stylem.css" rel="stylesheet" />
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-172492605-1');
+    </script>
 
 </head>
 
@@ -95,10 +103,11 @@
                     <div class="bottom">
                         <div class="social">
                             <ul>
-                                <li><a href="https://www.facebook.com/mert.guney.94801/"><i class="xcon-facebook"></i></a></li>
-                                <li><a href="https://twitter.com/mertguney29"><i class="xcon-twitter"></i></a></li>
-                                <li><a href="https://www.linkedin.com/in/mert-guney-57745519b/"><i class="xcon-linkedin"></i></a></li>
-                                <li><a href="https://www.instagram.com/mertguney29/"><i class="xcon-instagram"></i></a></li>
+                                <li><a target="_blank" href="https://www.facebook.com/mert.guney.94801/"><i class="xcon-facebook"></i></a></li>
+                                <li><a target="_blank" href="https://twitter.com/mertguney29"><i class="xcon-twitter"></i></a></li>
+                                <li><a target="_blank" href="https://www.linkedin.com/in/mert-guney-57745519b/"><i class="xcon-linkedin"></i></a></li>
+                                <li><a target="_blank" href="https://www.instagram.com/mertguney29/"><i class="xcon-instagram"></i></a></li>
+                                <li><a target="_blank" href="https://github.com/MertGuney"><i class="fa fa-github"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -180,10 +189,6 @@
                                                         <li>
                                                             <img class="svg" src="~/mjg/img/svg/study-5.svg" alt="" />
                                                             <span><label>Eğitim:</label> <a class="href_location" href="#"> @x.egitim</a></span>
-                                                        </li>
-                                                        <li>
-                                                            <img class="svg" src="~/mjg/img/svg/degree-1.svg" alt="" />
-                                                            <span><label>Degree:</label> Master</span>
                                                         </li>
                                                         <li>
                                                             <img class="svg" src="~/mjg/img/svg/message-3.svg" alt="" />
@@ -285,7 +290,7 @@
                                             </div>
                                             <div class="texts">
                                                 <h5 style="color:deeppink!important"><span>Çalışma Arkadaşlarım</span></h5>
-                                                <p>21 yaşında İzmirli bir yazılım mühendisiyim. Freelancer yazılımcı olarak çalışmaktayım. Güncel, profesyonel ve yaratıcı web siteleri yapıyorum ve yönetiyoum. Bunun dışında mobil ve bilgisayar uygulamaları geliştiriyorum.</p>
+                                                <p>21 yaşında İzmirli bir yazılım mühendisiyim. Freelancer yazılımcı olarak çalışmaktayım. Güncel, profesyonel ve yaratıcı web siteleri yapıyorum ve yönetiyorum. Bunun dışında mobil ve bilgisayar uygulamaları geliştiriyorum.</p>
                                                 <div class="author">
                                                     <div class="image">
                                                         <div class="main" data-img-url="/mjg/img/about/fali.png"></div>
@@ -312,33 +317,41 @@
                                     <h3>Deneyimlerim</h3>
                                 </div>
                                 <div class="timeline_inner">
-                                    @foreach (var x in Model.Deger3)
-                                    {
-                                        <div class="left">
-                                            <ul>
-                                                <li>
+                                    <div class="left">
+                                        <ul>
+                                            <li>
+
+                                                @foreach (var x in Model.Deger3)
+                                                {
                                                     <div class="inner">
                                                         <img class="svg" src="~/mjg/img/svg/degree-5.svg" alt="" />
                                                         <p class="year">@x.egitimTarih</p>
                                                         <h3 class="title">@x.egitimBaslik</h3>
                                                         <p class="text">@x.egitimAciklama</p>
                                                     </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="right">
-                                            <ul>
-                                                <li>
+                                                }
+
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="right">
+                                        <ul>
+                                            <li>
+
+                                                @foreach (var x in Model.Deger3)
+                                                {
                                                     <div class="inner">
                                                         <img class="svg" src="~/mjg/img/svg/portfolio.svg" alt="" />
                                                         <p class="year">@x.hizmetTarih</p>
                                                         <h3 class="title">@x.hizmetBaslik</h3>
                                                         <p class="text">@x.hizmetAciklama</p>
                                                     </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    }
+                                                }
+
+                                            </li>
+                                        </ul>
+                                    </div>
+
 
                                 </div>
                             </div>
@@ -384,7 +397,7 @@
                                             <div class="first">
                                                 <ul>
                                                     <li>
-                                                        <input id="name" type="text" placeholder="Name">
+                                                        <input id="name" type="text" placeholder="Konu">
                                                     </li>
                                                     <li>
                                                         <input id="email" type="text" placeholder="Email">
@@ -392,7 +405,7 @@
                                                 </ul>
                                             </div>
                                             <div class="last">
-                                                <textarea id="message" placeholder="Message"></textarea>
+                                                <textarea id="message" placeholder="Mesaj"></textarea>
                                             </div>
                                             <div class="arlo_tm_button">
                                                 <a id="send_message" href="#">Mesaj Gönder</a>

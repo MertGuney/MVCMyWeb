@@ -22,10 +22,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/25/2012 11:48:56</publishTime>
     </File>
     <File Include="bin/MJG.dll">
-      <publishTime>06/25/2020 20:04:18</publishTime>
+      <publishTime>07/13/2020 20:34:14</publishTime>
     </File>
     <File Include="bin/MJG.pdb">
-      <publishTime>06/25/2020 20:04:18</publishTime>
+      <publishTime>07/13/2020 20:34:14</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>08/08/2018 05:38:48</publishTime>
@@ -352,7 +352,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/25/2020 18:45:52</publishTime>
     </File>
     <File Include="Views/GirisYap/Index.cshtml">
-      <publishTime>06/25/2020 19:58:30</publishTime>
+      <publishTime>07/13/2020 20:32:14</publishTime>
     </File>
     <File Include="Views/Hakkimda/Index.cshtml">
       <publishTime>06/25/2020 18:29:49</publishTime>
@@ -364,7 +364,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/25/2020 19:22:57</publishTime>
     </File>
     <File Include="Views/Hizmetler/VeriGetir.cshtml">
-      <publishTime>06/25/2020 19:24:33</publishTime>
+      <publishTime>07/13/2020 20:26:21</publishTime>
     </File>
     <File Include="Views/Hizmetler/YeniDeneyim.cshtml">
       <publishTime>06/25/2020 19:24:43</publishTime>
@@ -373,10 +373,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/25/2020 19:27:32</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>06/25/2020 19:36:11</publishTime>
+      <publishTime>07/13/2020 20:33:01</publishTime>
     </File>
     <File Include="Views/Shared/_MainLayout.cshtml">
-      <publishTime>06/25/2020 18:22:11</publishTime>
+      <publishTime>07/13/2020 20:31:00</publishTime>
     </File>
     <File Include="Views/web.config">
       <publishTime>06/25/2020 16:39:20</publishTime>

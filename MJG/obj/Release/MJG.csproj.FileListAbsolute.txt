@@ -73,3 +73,4 @@ C:\Users\mert_\source\repos\MJG\MJG\obj\Release\MJG.csprojAssemblyReference.cach
 C:\Users\mert_\source\repos\MJG\MJG\obj\Release\MJG.csproj.CopyComplete
 C:\Users\mert_\source\repos\MJG\MJG\obj\Release\MJG.dll
 C:\Users\mert_\source\repos\MJG\MJG\obj\Release\MJG.pdb
+C:\Users\mert_\source\repos\MJG\MJG\obj\Release\MJG.csproj.CoreCompileInputs.cache
