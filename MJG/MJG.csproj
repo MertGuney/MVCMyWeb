@@ -223,7 +223,6 @@
     <Content Include="Views\Deneyim\YeniDeneyim.cshtml" />
     <Content Include="Views\Hizmetler\Index.cshtml" />
     <Content Include="Views\Hizmetler\VeriGetir.cshtml" />
-    <Content Include="Views\Hizmetler\YeniDeneyim.cshtml" />
     <Content Include="Views\Hizmetler\YeniHizmet.cshtml" />
     <Content Include="Views\GirisYap\Index.cshtml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
